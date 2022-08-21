@@ -1,0 +1,40 @@
+body {
+    background-color: #d3f0f0;
+}
+h1{
+    color: brown;
+    text-align: center;
+}
+h2 {
+    color: #252777;
+    text-align: center;
+}
+.first{
+    background-color: #f5de0c;
+    padding: 10px 0;
+}
+.second{
+    background-color: blue;
+    padding: 26px 0;
+}
+form {
+    display: inline-block;
+    width: 15%;
+    margin: 0 16%;
+    padding: 1%;
+}
+form.profile{
+    margin: 0 40%
+}
+h3 {
+    font-size: 24px;
+}
+input {
+    margin-bottom: 10px;
+}
+label{
+    font-size: 16px;
+}
+.second label{
+    color: #bdc012;
+}
