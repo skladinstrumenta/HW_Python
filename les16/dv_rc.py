@@ -24,10 +24,18 @@ class Recruiter(Employee):
 
     def work(self):
         """
-        Эта функция возвращает строку, которую говорят рекрутеры
+        Этот метод переопределяет метод WORK, 
+        из родительского класса EMPLOYEE,
+        и возвращает строку, которую говорят рекрутеры
         (EN)
-        This function returns a string that the recruiters say
+        This method overrides the WORK method,
+        from parent class EMPLOYEE,
+        and returns the string that the recruiters say
+
+        Returns:
+            work: "I come to the office and start to hiring." -> string
         """
+
         return "I come to the office and start to hiring."
 
     def __str__(self):
@@ -37,16 +45,17 @@ class Recruiter(Employee):
 class Developer(Employee):
     """
     В этом подклассе от родителя EMPLOYEE
-    можно перезадачить объекты для работы конкретно с данной вакансией
-    оприраясь на на родительский класс.
+    можно переопределить и добавить методы 
+    для работы конкретно с данной вакансией 
+    оприраясь на родительский класс.
     В данном случае мы добавляем в изначальные аргументы
     параметр 'tech_stack' отвечающий за технические способности
     данного сотрудника. При помощи изменений в данном классе
     мы можем сравнить объектов данной специальности по этому параметру.  
     (EN)
     In this subclass from parent EMPLOYEE
-    you can reassign objects to work specifically with this vacancy
-    relying on on the parent class.
+    you can override and extend methods to work specifically 
+    with this vacancy relying on the parent class.
     In this case, we add to the initial arguments
     parameter 'tech_stack' responsible for technical abilities
     this employee. With changes in this class
@@ -59,10 +68,18 @@ class Developer(Employee):
 
     def work(self):
         """
-        Эта функция возвращает строку, которую говорят разработчики
+        Этот метод переопределяет метод WORK, 
+        из родительского класса EMPLOYEE,
+        и возвращает строку, которую говорят разработчики
         (EN)
-        This function returns the page that the developers say
+        This method overrides the WORK method,
+        from parent class EMPLOYEE,
+        and returns the string that the developers say
+
+        Returns:
+            work: "I come to the office and start to coding." -> string
         """
+
         return "I come to the office and start to coding."
 
     def __str__(self):

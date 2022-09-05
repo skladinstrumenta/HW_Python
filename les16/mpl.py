@@ -35,9 +35,16 @@ class Employee:
         self.salary = salary
 
     def work(self):
+        # """
+        # """
         """Эта функция возвращает строку, которую говорят все работники
-        (EN)
-        The function returns a string that all employies say
+        # (EN)
+        # The function returns a string that all employies say
+
+        _summary_
+
+        Returns:
+            _type_: string
         """
         return "I come to the office."
 
@@ -60,7 +67,7 @@ class Employee:
         return self.salary() != other.salary()
 
     def check(self):
-        """Эта функция берёт из модуля "calendar" класс "Calendar", 
+        """Эта функция берёт из модуля "calendar" класс "Calendar",
         из него достаёт списки недель по дням (от ПН до ВС),
         потом в каждом списке удаляет выходные дни,
         и в итоге возвращает количество отработанных дней
@@ -69,6 +76,9 @@ class Employee:
         from it gets lists of weeks by day (from Monday to Sunday),
         then in each list removes weekends,
         and finally returns the number of days worked
+
+        Returns:
+            check: worked days -> integer
         """
         list_weeks = cl().monthdayscalendar(self.year, self.month)
         ld = self.lastday
@@ -99,6 +109,12 @@ class Employee:
         за отработанные им дни.
         (EN)
         This function returns the employee's salary for the days he worked
+
+        Args:
+            days : integer. Defaults to None.
+
+        Returns:
+            check_salary: salary by working day
         """
         if days == None:
             days = self.check()
