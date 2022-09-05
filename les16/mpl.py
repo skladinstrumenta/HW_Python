@@ -15,12 +15,16 @@ class Employee:
     - с приветсвием сотрудников;
     - с сравнениями объктов опирающихся на это класс;
     - высчитывания зароботной платы отработанных дней по календарю.
+    Первоначально класс обретает от импортированного класса datetime.date
+    сегодняшнюю дату, из которого берёт переменные year, month, lastday
     (EN)
     This parent class is designed to work with objects
     in the basic indicationsb, in it we can work:
-    - with greetings from employees;
+    - greeting employees;
     - with comparisons of objects based on this class;
-    - calculation of wages for days worked according to the calendar.
+    - Calculation of the salary of worked days according to the calendar.
+    Initially the class derives from the imported class datetime.date
+    today's date, from which it takes the variables year, month, lastday
     """
     today = dt.today()
     year = list(map(int, (str(today).split("-"))))[0]
@@ -35,16 +39,12 @@ class Employee:
         self.salary = salary
 
     def work(self):
-        # """
-        # """
         """Эта функция возвращает строку, которую говорят все работники
-        # (EN)
-        # The function returns a string that all employies say
-
-        _summary_
+        (EN)
+        The function returns a string that all employies say
 
         Returns:
-            _type_: string
+            work: "I come to the office." -> string
         """
         return "I come to the office."
 
