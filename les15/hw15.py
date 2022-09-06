@@ -5,9 +5,7 @@ from calendar import Calendar as cl
 
 class Employee:
     today = d.today()
-    year = list(map(int, (str(today).split("-"))))[0]
-    month = list(map(int, (str(today).split("-"))))[1]
-    lastday = list(map(int, (str(today).split("-"))))[2]
+    year, month, lastday = today.year, today.month, today.day
 
     def __new__(cls, *args, **kwargs):
         return object.__new__(cls)
@@ -35,7 +33,7 @@ class Employee:
         return self.salary == other.salary
 
     def __ne__(self, other):
-        return self.salary() != other.salary()
+        return self.salary != other.salary
 
     def check(self):
         a = cl().monthdayscalendar(self.year, self.month)
@@ -58,7 +56,7 @@ class Employee:
             work_day.remove(0)
         # Получаем число количества отработанных дней
         len_workday = len(work_day)
-        
+
         return (len_workday)
 
     def check_salary(self, days=None):
@@ -132,7 +130,7 @@ if __name__ == "__main__":
     # print(rec1 > rec2)
     # print(rec2 < dev1)
     # print(rec1 >= dev2)
-    # print(rec1 == dev1)
+    # print(rec1 != dev1)
 
 # высчитывание зп за кол-во отработанных дней
     # print(rec1.check_salary(28))
