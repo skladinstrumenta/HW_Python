@@ -27,9 +27,7 @@ class Employee:
     today's date, from which it takes the variables year, month, lastday
     """
     today = dt.today()
-    year = list(map(int, (str(today).split("-"))))[0]
-    month = list(map(int, (str(today).split("-"))))[1]
-    lastday = list(map(int, (str(today).split("-"))))[2]
+    year, month, lastday = today.year, today.month, today.day
 
     def __new__(cls, *args, **kwargs):
         return object.__new__(cls)
@@ -64,7 +62,7 @@ class Employee:
         return self.salary == other.salary
 
     def __ne__(self, other):
-        return self.salary() != other.salary()
+        return self.salary != other.salary
 
     def check(self):
         """Эта функция берёт из модуля "calendar" класс "Calendar",
